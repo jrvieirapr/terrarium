@@ -1,24 +1,16 @@
 <?php
 
+use App\Http\Controllers\BichoController;
 use App\Http\Controllers\TipoBichoController;
 use App\Models\TipoBicho;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('index');
 });
 
-
 Route::resource('tiposbichos',TipoBichoController::class);
+Route::resource('bichos',BichoController::class);
+
+
 

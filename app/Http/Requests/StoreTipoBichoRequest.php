@@ -23,10 +23,7 @@ class StoreTipoBichoRequest extends FormRequest
     {
       
             return [
-                "name" => 'required|min:2|max:50',
-                "idade"=> 'required|min:2|max:50',
-                "cor" => 'required|min:2|max:50',
-                "tipo_bicho_id"=> 'required'
+                "descricao" => 'required|min:2|max:30'
             ];
     }
 }
