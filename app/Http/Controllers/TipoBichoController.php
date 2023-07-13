@@ -15,7 +15,7 @@ class TipoBichoController extends Controller
     {
         $tipos_bichos = TipoBicho::all();
         // $tipos_bicho = TipoBicho::Paginate(50);
-        $total = TipoBicho::all()->count();
+        $total = $tipos_bichos->count();
         return view("tipos_bichos.index", compact(["tipos_bichos", "total"]));
     }
 
