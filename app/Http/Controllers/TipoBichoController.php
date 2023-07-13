@@ -34,7 +34,7 @@ class TipoBichoController extends Controller
     {
         $data = $request->all();
         $tipos = TipoBicho::create($data);       
-        return redirect()->route('tipos_bichos.index');
+        return redirect()->route('tiposbichos.index');
     }
     /**
      * Display the specified resource.
@@ -59,7 +59,7 @@ class TipoBichoController extends Controller
     {
         $data = $request->all();
         $tipoBicho->update($data);
-        return redirect()->route('tipos_bichos.index');
+        return redirect()->route('tiposbichos.index');
     }
 
     /**
@@ -70,6 +70,6 @@ class TipoBichoController extends Controller
         if (isset($tipoBicho)) {
             $tipoBicho->delete();            
         } 
-        return redirect()->route('tipos_bichos.index');
+        return redirect()->route('tiposbichos.index');
     }
 }

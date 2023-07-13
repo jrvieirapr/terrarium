@@ -20,10 +20,9 @@ class StoreTipoBichoRequest extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
     public function rules(): array
-    {
-      
+    {      
             return [
-                "descricao" => 'required|min:2|max:30'
+                "descricao" => 'required|min:2|max:30|unique:tipo_bichos,descricao'
             ];
     }
 }
