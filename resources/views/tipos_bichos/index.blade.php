@@ -17,8 +17,11 @@
                 <tr>
                     <th scope="row">{{ $t->id}}</th>
                     <td>{{$t->descricao}}</td>
-                    <td>Editar</td>
-                    <td>Remover</td>
+                    <div class="btn-group">
+                        <a href="{{ route('companies.edit', ['tipoBicho' => $t]) }}" 
+                        class="btn btn-sm btn-primary">Editar</a>
+                        <td>Remover</td>
+                    </div>
                 </tr>
                 @endforeach
             </tbody>
