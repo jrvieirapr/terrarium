@@ -17,11 +17,14 @@
                 <tr>
                     <th scope="row">{{ $t->id}}</th>
                     <td>{{$t->descricao}}</td>
-                    <div class="btn-group">
-                        <a href="{{ route('companies.edit', ['tipoBicho' => $t]) }}" 
-                        class="btn btn-sm btn-primary">Editar</a>
-                        <td>Remover</td>
-                    </div>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn btn-warning" 
+                            href="{{ route('tiposbichos.edit', ['tiposbicho' => $t]) }}"                            
+                            role="button">Editar</a>
+                            <td>Remover</td>
+                        </div>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
