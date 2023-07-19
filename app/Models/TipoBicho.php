@@ -10,5 +10,10 @@ class TipoBicho extends Model
     use HasFactory;
 
     protected $fillable = ["descricao"];
+
+    public function bichos()
+    {
+        return $this->hasMany(Bicho::class);
+    }
 }
 

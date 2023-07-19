@@ -23,7 +23,7 @@ class UpdateBichoRequest extends FormRequest
     {
         return [
             "nome" => 'required|min:2|max:50',
-            "idade"=> 'required|min:2|max:2|integer',
+            "idade"=> 'required|min:1|max:3|integer',
             "cor" => 'required|min:2|max:50',
             "tipo_bicho_id"=> 'required|integer'
         ];
