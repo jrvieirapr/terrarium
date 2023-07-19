@@ -13,6 +13,7 @@ class Bicho extends Model
 
     public function tipobicho()
     {
-        return $this->belongsTo(TipoBicho::class, "tipo_bicho_id");
+        return $this->belongsTo(TipoBicho::class,
+         "tipo_bicho_id");
     }
 }
