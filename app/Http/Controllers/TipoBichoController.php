@@ -66,7 +66,7 @@ class TipoBichoController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(TipoBicho $tiposbicho)
-    {
+    {    
         if (isset($tiposbicho)) {
             $tiposbicho->delete();            
         } 
