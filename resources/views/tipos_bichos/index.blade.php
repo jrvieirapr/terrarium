@@ -15,14 +15,18 @@
             <tbody>
                 @foreach($tipos_bichos as $t)
                 <tr>
-                    <th scope="row">{{ $t->id}}</th>
+                    <td scope="row">{{ $t->id}}</td>
                     <td>{{$t->descricao}}</td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn-warning" 
-                            href="{{ route('tiposbichos.edit', ['tiposbicho' => $t]) }}"                            
-                            role="button">Editar</a>
-                            <td>Remover</td>
+                            <a class="btn btn-warning me-md-2 btn-formulario" 
+                            href="{{ route('tiposbichos.edit', ['tiposbicho' => $t]) }}" role="button">Editar</a>
+                            
+                            <form action="{{ route('tiposbichos.destroy', ['tiposbicho' => $t]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger me-md-2 btn-formulario" type="submit">Remover</button>
+                            </form>
                         </div>
                     </td>
                 </tr>

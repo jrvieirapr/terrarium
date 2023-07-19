@@ -8,7 +8,10 @@
             <label for="descricao" class="form-label">Descrição</label>
             <input type="text" class="form-control  @error('descricao') is-invalid @enderror" 
             id="descricao" 
-            placeholder="Digite o tipo do bicho" name="descricao">
+            placeholder="Digite o tipo do bicho" 
+            name="descricao"
+            value="{{ old('descricao') }}"
+            >
             @error('descricao')
             <div class="invalid-feedback">
                 {{ $message }}

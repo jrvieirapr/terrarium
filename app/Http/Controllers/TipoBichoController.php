@@ -39,36 +39,36 @@ class TipoBichoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(TipoBicho $tipoBicho)
+    public function show(TipoBicho $tiposbicho)
     {
-        return view("tipos_bichos.show",compact(["tipoBicho"]));
+        return view("tipos_bichos.show",compact(["tiposbicho"]));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(TipoBicho $tipoBicho)
+    public function edit(TipoBicho $tiposbicho)
     {
-        return view("tipos_bichos.edit", compact(["tipoBicho"]));
+        return view("tipos_bichos.edit", compact(["tiposbicho"]));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTipoBichoRequest $request, TipoBicho $tipoBicho)
+    public function update(UpdateTipoBichoRequest $request, TipoBicho $tiposbicho)
     {
         $data = $request->all();
-        $tipoBicho->update($data);
+        $tiposbicho->update($data);
         return redirect()->route('tiposbichos.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(TipoBicho $tipoBicho)
+    public function destroy(TipoBicho $tiposbicho)
     {
-        if (isset($tipoBicho)) {
-            $tipoBicho->delete();            
+        if (isset($tiposbicho)) {
+            $tiposbicho->delete();            
         } 
         return redirect()->route('tiposbichos.index');
     }
