@@ -16,7 +16,7 @@
         </div>
         <div class="mb-3">
             <label for="idade" class="form-label">Idade:</label>
-            <input type="text" class="form-control  @error('idade') is-invalid @enderror" 
+            <input type="number" class="form-control  @error('idade') is-invalid @enderror" 
             id="idade" placeholder="Digite a idade" name="idade" value="{{ old('idade') }}">
             @error('idade')
             <div class="invalid-feedback">

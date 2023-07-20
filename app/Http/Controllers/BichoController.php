@@ -33,8 +33,8 @@ class BichoController extends Controller
      */
     public function store(StoreBichoRequest $request)
     {
-        $data = $request->all();      
-        $bicho = Bicho::create($data);       
+        $data = $request->all();
+        $bicho = Bicho::create($data);
         return redirect()->route('bichos.index');
     }
 
@@ -43,7 +43,8 @@ class BichoController extends Controller
      */
     public function show(Bicho $bicho)
     {
-        return view("bichos.show",compact(["bicho"]));
+
+        return view("bichos.show", compact(["bicho"]));
     }
 
     /**
@@ -51,7 +52,8 @@ class BichoController extends Controller
      */
     public function edit(Bicho $bicho)
     {
-        return view("bichos.edit", compact(["bicho"]));
+        $tipos_bichos = TipoBicho::all();
+        return view("bichos.edit", compact(["bicho","tipos_bichos"]));
     }
 
     /**
@@ -60,7 +62,7 @@ class BichoController extends Controller
     public function update(UpdateBichoRequest $request, Bicho $bicho)
     {
         $data = $request->all();
-        $bicho->update($data);    
+        $bicho->update($data);
         return redirect()->route('bichos.index');
     }
 
@@ -70,8 +72,8 @@ class BichoController extends Controller
     public function destroy(Bicho $bicho)
     {
         if (isset($bicho)) {
-            $bicho->delete();            
-        } 
+            $bicho->delete();
+        }
         return redirect()->route('bichos.index');
     }
 }
