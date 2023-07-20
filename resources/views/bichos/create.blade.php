@@ -27,7 +27,7 @@
         <div class="mb-3">
             <label for="cor" class="form-label">Cor:</label>
             <input type="text" class="form-control  @error('cor') is-invalid @enderror" 
-            id="cor" placeholder="Digite a cor" name="cor" value="{{ old('cor') }}">
+            id="cor" placeholder="Digiten a cor" name="cor" value="{{ old('cor') }}">
             @error('cor')
             <div class="invalid-feedback">
                 {{ $message }}

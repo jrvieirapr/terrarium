@@ -33,7 +33,7 @@ class BichoController extends Controller
      */
     public function store(StoreBichoRequest $request)
     {
-        $data = $request->all();
+        $data = $request->all();      
         $bicho = Bicho::create($data);       
         return redirect()->route('bichos.index');
     }
